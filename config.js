@@ -23,10 +23,15 @@ let inimigoBase = {
     invertida: 30
 } 
 
-const hab1 = document.getElementById("hab1").innerHTML=heroiBase.atackNormal[0]
-const hab2 = document.getElementById("hab2").innerHTML=heroiBase.jumpuda[0]
-const hab3 = document.getElementById("hab3").innerHTML=heroiBase.bigodada[0]
-const hab4 = document.getElementById("hab4").innerHTML=heroiBase.ofenca[0]
-const life = document.getElementById("life_barr").style.width=heroiBase.vida+"%"
+const hab1 = document.getElementById("hab1")
+hab1.innerHTML="clique para sair" //heroiBase.atackNormal[0]
+const hab2 = document.getElementById("hab2")
+hab2.innerHTML=heroiBase.jumpuda[0]
+const hab3 = document.getElementById("hab3")
+hab3.innerHTML=heroiBase.bigodada[0]
+const hab4 = document.getElementById("hab4")
+hab4.innerHTML=heroiBase.ofenca[0]
+const life = document.getElementById("life_barr")
+life.style.width=heroiBase.vida+"%"
 
-export {heroiBase, heroiWolfFormBase, inimigoBase}
+export {heroiBase, heroiWolfFormBase, inimigoBase, hab1}

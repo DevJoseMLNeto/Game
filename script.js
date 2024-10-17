@@ -1,4 +1,5 @@
 // VARIAVEIS
+import { romance } from "./script3.js"
 
 const heroi = document.getElementById('kaique')
 const wall = document.getElementById("wall")
@@ -80,12 +81,14 @@ document.addEventListener("keydown",(evt)=>{
       evt.code.preventDefault()
     }
     movimento.up(heroi,grama)
+    romance([...document.querySelectorAll(".inimigo")])
   }
   if(evt.code=="ArrowLeft"){
     if(parseInt(getComputedStyle(heroi).left)<=0){
       evt.code.preventDefault()
     }
     movimento.left(heroi,grama)
+    romance([...document.querySelectorAll(".inimigo")])
 
   }
   if(evt.code=="ArrowRight"){
@@ -94,6 +97,7 @@ document.addEventListener("keydown",(evt)=>{
       
     }
     movimento.right(heroi,grama)
+    romance([...document.querySelectorAll(".inimigo")])
 
   }
   if(evt.code=="ArrowDown"){
@@ -102,6 +106,7 @@ document.addEventListener("keydown",(evt)=>{
       
     }
     movimento.down(heroi,grama)
+    romance([...document.querySelectorAll(".inimigo")])
 
   }
 })

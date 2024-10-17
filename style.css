@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  border: none;
 }
 body{
   height: 100vh;
@@ -9,14 +10,16 @@ body{
 
 main{
   height: 100vh;
-
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
 }
 
 .mapa{
-  height:100%;
-  width: 100%;
+  order: 0;
+  height:100vh;
+  width: 100vw;
   overflow: hidden;
-  
 }
 
 .grama{
@@ -57,6 +60,7 @@ main{
 /* *****************************  STYLE DO COMBATE  ************************** */
 
 .cenarioCombate{
+  order: 1;
   height: 100vh;
   width: 100vw;
   background-color: rgb(103, 103, 242);
@@ -82,10 +86,23 @@ main{
   justify-content: space-evenly;
   align-items: center ;
 }
+.mold{
+  height: 100px;
+  width: 270px;
+  
+  background-image: url("assets/molduras-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+}
 .btns_hab{
-  font-size: large;
-  width: 250px;
-  height: 70px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 80%;
+  height: 80%;
+  padding-top: 30px;
+  background-color: transparent;
 }
 
 .life{

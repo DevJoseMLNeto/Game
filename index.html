@@ -9,27 +9,36 @@
 <body>
     <main id="main">
       <div class="mapa" id="mapa" style="border: 2px solid black;">
-            <div class="grama" id="grama">
-              <div id="wall" class="wall">
-                <div class="kaique" id="kaique"></div>
-              </div>
-            </div>        
-      </div>
-      <div class="cenarioCombate" id="cenarioCombate" style=" position: absolute; display:none;">
-        <div class="arena"></div>
-        <div class="painel">
-          <div class="hab">
-            <button id="hab1" class="btns_hab"></button>
-            <button id="hab2" class="btns_hab"></button>
-            <button id="hab3" class="btns_hab"></button>
-            <button id="hab4" class="btns_hab"></button>
-          </div>
-          <hr>
-          <div class="life">
-            <div id="life_barr">Vida</div>
-          </div>
+        <div class="grama" id="grama">
+          <div id="wall" class="wall">
+            <div class="kaique" id="kaique"></div>
+           </div>
         </div>
       </div>
+      <div class="cenarioCombate" id="cenarioCombate" style="display:flex;">
+        <div class="arena"></div>
+       <div class="painel">
+          <div class="hab">
+            <div class="mold">
+           <button id="hab1" class="btns_hab"></button>
+          </div>
+            <div class="mold">
+              <button id="hab2" class="btns_hab"></button>
+            </div>
+            <div class="mold">
+           <button id="hab3" class="btns_hab"></button>
+            </div>
+            <div class="mold">
+              <button id="hab4" class="btns_hab"></button>
+            </div>
+         </div>
+         <hr style="width: 1px; background-color: rgb(151, 146, 146); box-shadow: 2px 0px 3px gray;">
+         <div class="life">
+           <div id="life_barr">Vida</div>
+          </div>
+       </div>
+     </div>
+     
     </main>
 
     <script type="module" src="script.js"></script>

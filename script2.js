@@ -53,7 +53,7 @@ import { heroi, grama, mapa,wall } from "./script.js";
                     element.style.top=parseInt(getComputedStyle(element).top)+dir*(10)+"px"
                     
 
-                },10)
+                },50)
                 setTimeout(()=>{
                     clearInterval(mov)
                     movX()
@@ -72,7 +72,7 @@ import { heroi, grama, mapa,wall } from "./script.js";
                     }
 
                     element.style.left=parseInt(getComputedStyle(element).left)+dir*(10)+"px"
-                },10)
+                },50)
 
                 setTimeout(()=>{
                     clearInterval(movs)

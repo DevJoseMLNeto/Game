@@ -56,31 +56,37 @@ main{
   background-size: cover;
   background-position: center;
 }
-
 /* *****************************  STYLE DO COMBATE  ************************** */
 
 .cenarioCombate{
   order: 1;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(103, 103, 242);
+  background-image: url("assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .arena{
-  height: 20vh ;
-  background-color: green;
+  height: 50vh ;
+  background-color: transparent;
+  display: flex;
+}
+.side{
+  width: 50vw;
+  height:100% ;
 }
 
 .painel{
   height: 30vh;
-  background-color: rgba(226, 222, 222, 0.663);
   display: flex;
+  background-color: rgba(34, 33, 33, 0.396);
 }
 .hab{
-  width: 400px;
+  width: 35vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -106,7 +112,7 @@ main{
 .life{
   margin: 10px 20px;
   height: 29px;
-  width: 310px;
+  width: 35vw;
   display: flex;
   justify-content: flex-start;
 }
@@ -120,25 +126,49 @@ main{
   padding: 8px;
 }
 
-
-/* .pisca{
-display: none;
-height: 100%;
-width:100%;
-animation-name: piscapisca;
-animation-duration: 0.5s;
-animation-timing-function: linear;
-animation-iteration-count: infinite;
-animation-fill-mode: both;
+.dado_box{
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@keyframes piscapisca {
-  0%{
-    background-color: red;
-  }50%{
-    background-color: black;
-  }100%{
-    background-color: white;
-  }
-} */
 
+.dado{
+  height: 60%;
+  width: 40%;
+  border: 2px solid black ;
+  background-color: aqua;
+}
+
+.kaiqueCombate{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-image: url('assets/heroi.jpg');
+  background-size: cover;
+  height: 40%;
+  width: 20%;
+}
+
+.inimigoCombate{
+
+  height: 50%;
+  width: 20%;
+  margin: 0 auto;
+  background-image: url("assets/originalImage.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+#heroiSide{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#enemySide{
+  display: flex;
+  justify-content: center;
+}
 

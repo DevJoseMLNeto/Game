@@ -6,20 +6,18 @@ import { movimentoInimigo } from "./script2.js"
 const cenarioCombate = document.getElementById("cenarioCombate")
 const main = document.getElementById("main")
 const pisca = document.getElementById("pisca")
+let index = false
 
 function initCenario(valor){
-    let index = false
     if (valor) {
         mapa.style.order="1"
         cenarioCombate.style.order="0"
-        index=true
-        movimentoInimigo(null, index)
+       movimentoInimigo([...document.querySelectorAll(".inimigo")])
     }
     hab1.addEventListener("click",(evt)=>{
         mapa.style.order="0"
         cenarioCombate.style.order="1"
-        index=false
-        movimentoInimigo([...document.querySelectorAll(".inimigo")], index)
+       movimentoInimigo([...document.querySelectorAll(".inimigo")])
     })
 }
 

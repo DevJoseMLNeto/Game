@@ -78,10 +78,10 @@ const movimento = {
 document.addEventListener("keydown",(evt)=>{
   if(evt.code==="ArrowUp"){
     if(parseInt(getComputedStyle(heroi).top)<=0){
-      evt.code.preventDefault()
     }
     movimento.up(heroi,grama)
     romance([...document.querySelectorAll(".inimigo")])
+    console.log(romance())
   }
   if(evt.code=="ArrowLeft"){
     if(parseInt(getComputedStyle(heroi).left)<=0){
@@ -107,6 +107,7 @@ document.addEventListener("keydown",(evt)=>{
     }
     movimento.down(heroi,grama)
     romance([...document.querySelectorAll(".inimigo")])
+    
 
   }
 })

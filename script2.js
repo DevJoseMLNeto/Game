@@ -36,75 +36,64 @@ import { heroi, grama, mapa,wall } from "./script.js";
         }
     }
 
-    class movimentoInimigo{
-        constructor(inimigo, index){
-            this.inimigo=inimigo
-            this.index=index
-            this.dir = Math.floor(Math.random()*2+1)
-            if(this.dir == 1){this.dir=+1}else if(this.dir == 2){this.dir=-1}
-            this.movimento()
-            this.index=index
-            if (index) {clearInterval(this.mov)}
-                
-        }
-        movimento=()=>{
-            this.inimigo.forEach(element => {
-                this.mov = setInterval(()=>{
-                    let posY = parseInt(getComputedStyle(element).top)
-                    if (posY>=3560 || posY<=0) {
-                        this.dir=this.dir*(-1)
-                    }
-                    element.style.top=parseInt(getComputedStyle(element).top)+this.dir*(10)+"px"
-                },200)   
-            });
-        }
-
-        }
-
-        // inimigo.forEach(element => {
-
-        //     let movY=()=>{
-        //         let dir = Math.floor(Math.random()*2+1)
-        //         if(dir == 1){dir=+1}else if(dir == 2){dir=-1}
-        //         
-        //         setTimeout(()=>{
-        //             clearInterval(mov)
-        //             movX()
-        //         },3000)
-        //         if(index){
-        //             clearInterval(mov)
-        //         }
-        //     }
-
-        //     let movX= ()=>{
-
-        //         let dir = Math.floor(Math.random()*2+1)
-        //         if(dir == 1){dir=+1}else if(dir == 2){dir=-1}
-        //         let movs = setInterval(()=>{
-        //             let posX = parseInt(getComputedStyle(element).left)
-        //             if (posX>=3560 || posX<=0) {
-        //                 dir=dir*(-1)
-        //             }
-        //             element.style.left=parseInt(getComputedStyle(element).left)+dir*(10)+"px"
-        //         },200)
-        //         setTimeout(()=>{
-        //             clearInterval(movs)
-        //             movY()
-        //         },3000)
-        //     }
-        //     let dirA = Math.floor(Math.random()*2+1)
-        //     if(dirA==1){
-        //         movY()
-        //     }else if(dirA==2){
-        //         movX()
-        //     }   
-           
-        // });
+    function movimentoInimigo(inimigo){
+        inimigo.forEach(element => {
+ 
+         
+ 
+             function movY(){
+                 let dir = Math.floor(Math.random()*2+1)
+                 if(dir == 1){dir=+1}else if(dir == 2){dir=-1}
+                 let mov = setInterval(()=>{
+                     let posY = parseInt(getComputedStyle(element).top)
+                     if (posY>=3560 || posY<=0) {
+ 
+                         dir=dir*(-1)
+                     }
+                     element.style.top=parseInt(getComputedStyle(element).top)+dir*(10)+"px"
+                     
+ 
+                 },10)
+                 setTimeout(()=>{
+                     clearInterval(mov)
+                     movX()
+                 },3000)
+             }
+             function movX(){
+ 
+                 let dir = Math.floor(Math.random()*2+1)
+                 if(dir == 1){dir=+1}else if(dir == 2){dir=-1}
+                 
+                 let movs = setInterval(()=>{
+                     
+                     let posX = parseInt(getComputedStyle(element).left)
+                     if (posX>=3560 || posX<=0) {
+                         dir=dir*(-1)
+                     }
+ 
+                     element.style.left=parseInt(getComputedStyle(element).left)+dir*(10)+"px"
+                 },10)
+ 
+                 setTimeout(()=>{
+                     clearInterval(movs)
+                     movY()
+                 },3000)
+             }
+             let dirA = Math.floor(Math.random()*2+1)
+             if(dirA==1){
+                 movY()
+             }else if(dirA==2){
+                 movX()
+             }
+            
+            
+         });
+     }
+    
 
     window.addEventListener("load",(evt)=>{
         gerarInimigo(wall)
-        new movimentoInimigo([...document.querySelectorAll(".inimigo")], false)
-
+        movimentoInimigo([...document.querySelectorAll(".inimigo")])
     })
 
 export {movimentoInimigo}

@@ -1,9 +1,9 @@
 // Aqui será desenvolvido o derradeiro entre o heroi kaique e seus inimigos
-
 import { heroi, wall } from "./script.js";
 import { initCenario } from "./script4.js";
 import { positionCombate } from "./script5.js";
-
+import { Combate } from "./script5.js";
+import { heroiBase, btns_hab } from "./config.js";
 
 
 function romance(enimies){
@@ -25,6 +25,7 @@ function romance(enimies){
         if(heroiX.right>=inimigo.left && heroiX.left<=inimigo.right && heroiX.bottom >= inimigo.top && heroiX.top <= inimigo.bottom ){
             new positionCombate(true,null).positionHeroi()
             new positionCombate(true,el).positionEnemy()
+            new Combate(heroiBase, btns_hab).habClick()
             return true
         }
     })

@@ -99,6 +99,7 @@ main{
     background-size: cover;
     background-position: center;
     text-align: center;
+    cursor: pointer;
 }
 .btns_hab{
   font-size: 9px;
@@ -107,6 +108,7 @@ main{
   height: 80%;
   padding-top: 15px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .life{
@@ -141,20 +143,29 @@ main{
   background-color: aqua;
 }
 
-.kaiqueCombate{
+#heroi_box{
+  position: relative;
   margin: 0 auto;
   margin-bottom: 20px;
-  background-image: url('assets/heroi.jpg');
-  background-size: cover;
+
   height: 40%;
   width: 20%;
 }
-
-.inimigoCombate{
-
+.kaiqueCombate{
+  background-image: url('assets/heroi.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#inimigo_box{
+  position: relative;
   height: 50%;
   width: 20%;
   margin: 0 auto;
+}
+.inimigoCombate{
+  height: 100%;
+  width: 100%;
   background-image: url("assets/originalImage.png");
   background-size: cover;
   background-position: center;
@@ -171,4 +182,44 @@ main{
   display: flex;
   justify-content: center;
 }
+
+
+/* ANIMAÇÕES DA PORRADA */
+
+.ataqueNormal{
+  animation-name: jumpundoAnimation;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(0.2,.99,1,.45);
+}
+
+@keyframes jumpundoAnimation {
+  0%{
+    left: 0px;
+    bottom: 0px;
+  }50%{
+    left: 348px;
+    bottom: 83px;
+  }100%{
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+.inimigoGolpeado{
+  animation-name: golpeadoI;
+  animation-duration: 100ms;
+  animation-delay: 500ms;
+  animation-timing-function: linear;
+}
+
+@keyframes golpeadoI {
+  0%{
+    left: 0px;
+  }50%{
+   left: 20px;
+  }100%{
+    left: 0px;
+  }
+}
+
 

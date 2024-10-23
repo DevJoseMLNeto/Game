@@ -81,7 +81,6 @@ document.addEventListener("keydown",(evt)=>{
     }
     movimento.up(heroi,grama)
     romance([...document.querySelectorAll(".inimigo")])
-    console.log(romance())
   }
   if(evt.code=="ArrowLeft"){
     if(parseInt(getComputedStyle(heroi).left)<=0){

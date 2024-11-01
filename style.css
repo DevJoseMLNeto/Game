@@ -187,12 +187,37 @@ main{
 /* ANIMAÇÕES DA PORRADA */
 
 .ataqueNormal{
-  animation-name: jumpundoAnimation;
+  animation-name: ataqueNormalAnimation;
   animation-duration: 1000ms;
   animation-timing-function:cubic-bezier(0.2,.99,1,.45);
 }
 
-@keyframes jumpundoAnimation {
+.garrada{
+  animation-name: garradaAnimation;
+  animation-duration: 1000ms;
+}
+
+@keyframes garradaAnimation {
+  0%{
+    left: 0px;
+    bottom: 0px;
+  }25%{
+    left: 20px;
+    bottom: 20px;
+  }50%{
+    left: 0px;
+    bottom: 0px;
+  }75%{
+    left: -20px;
+    bottom: 20px
+  }100%{
+    left: 0px;
+    bottom: 0px
+  }
+  
+}
+
+@keyframes ataqueNormalAnimation {
   0%{
     left: 0px;
     bottom: 0px;
@@ -219,6 +244,25 @@ main{
    left: 20px;
   }100%{
     left: 0px;
+  }
+}
+
+.inimigoAtaqueNormal{
+  animation-name: ataqueNormalAnimationInimigo;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(0.2,.99,1,.45);
+}
+
+@keyframes ataqueNormalAnimationInimigo {
+  0%{
+    left: 0px;
+    bottom: 0px;
+  }50%{
+    left: -348px;
+    bottom: -83px;
+  }100%{
+    left: 0px;
+    bottom: 0px;
   }
 }
 

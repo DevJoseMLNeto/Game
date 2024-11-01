@@ -13,7 +13,14 @@ function initCenario(valor){
     }
 }
 
+function returnMapa(valor){
+    if (valor) {
+        mapa.style.order="0"
+        cenarioCombate.style.order="1"  
+    }
+}
 
 
 
+export{returnMapa} // EXPORTADO PARA SCRIPT5.JS
 export{initCenario} // EXPORTADO PARA SCRIPT3.JS

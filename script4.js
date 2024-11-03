@@ -4,12 +4,14 @@ import { mapa } from "./script.js"
 
 
 const cenarioCombate = document.getElementById("cenarioCombate")
-
+const btns_for_mobile = document.querySelector(".btns_for_mobile")
 
 function initCenario(valor){
     if (valor) {
         mapa.style.order="1"
         cenarioCombate.style.order="0"
+        btns_for_mobile.style.display="none"
+        console.log(btns_for_mobile)
     }
 }
 
@@ -17,6 +19,7 @@ function returnMapa(valor){
     if (valor) {
         mapa.style.order="0"
         cenarioCombate.style.order="1"  
+        btns_for_mobile.style.display="flex"
     }
 }
 

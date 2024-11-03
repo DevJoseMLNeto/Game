@@ -4,6 +4,10 @@
   box-sizing: border-box;
   border: none;
 }
+.btns_for_mobile{
+  display: none;
+}
+
 body{
   height: 100vh;
 }
@@ -57,7 +61,26 @@ main{
   background-position: center;
 }
 /* *****************************  STYLE DO COMBATE  ************************** */
-
+.btnM{
+  height: 60px;
+  width: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: rgb(221, 221, 221);
+}
+.up{
+  display: flex;
+  justify-content: center;
+}
+.down{
+  display: flex;
+}
+.btns_for_mobile{
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
 .cenarioCombate{
   order: 1;
   height: 100vh;
@@ -267,3 +290,23 @@ main{
 }
 
 
+@media only screen and (max-width:720px) {
+  @media (orientation:landscape){  
+    .cenarioCombate{
+      background-position: center;
+      background-size: contain;
+    
+    }
+  
+    #inimigo_box{
+      height: 121px;
+      width: 101px;
+    }
+
+    #heroi_box{
+      margin-bottom: 54px;
+      height: 123px;
+      width: 104px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-
+alert("Vire a tela na horizontal")
+alert("Toque e mova o dedo nos direcionais para movimentar o kaique")
 
 
 let heroiBase =  {

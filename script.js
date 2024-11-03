@@ -1,6 +1,7 @@
 // VARIAVEIS
 import { romance } from "./script3.js"
 
+
 const heroi = document.getElementById('kaique')
 const wall = document.getElementById("wall")
 const grama = document.getElementById("grama")
@@ -46,6 +47,13 @@ function gerarPosMapa(){
 
 
   // DEFININDO MOVIMENTO DO KAIQUE
+
+const btns_mobile = {
+  up: document.getElementById("btn1"),
+  left: document.getElementById("btn2"),
+  down: document.getElementById("btn3"),
+  right: document.getElementById("btn4"),
+}
 
 const movimento = {
   up :(heroi,grama)=>{
@@ -109,4 +117,35 @@ document.addEventListener("keydown",(evt)=>{
     
 
   }
+})
+
+btns_mobile.up.addEventListener("touchmove",(evt)=>{
+  if(parseInt(getComputedStyle(heroi).top)<=0){
+  }
+  movimento.up(heroi,grama)
+  romance([...document.querySelectorAll(".inimigo")])
+})
+
+btns_mobile.down.addEventListener("touchmove",(evt)=>{
+  if(parseInt(getComputedStyle(heroi).top)>=3560){
+  }
+  movimento.down(heroi,grama)
+  romance([...document.querySelectorAll(".inimigo")])
+})
+
+btns_mobile.left.addEventListener("touchmove",(evt)=>{
+  if(parseInt(getComputedStyle(heroi).left)<=0){
+    evt.code.preventDefault()
+  }
+  movimento.left(heroi,grama)
+  romance([...document.querySelectorAll(".inimigo")])
+})
+
+btns_mobile.right.addEventListener("touchmove",(evt)=>{
+  if(parseInt(getComputedStyle(heroi).left)>=3560){
+    evt.code.preventDefault()
+    
+  }
+  movimento.right(heroi,grama)
+  romance([...document.querySelectorAll(".inimigo")])
 })

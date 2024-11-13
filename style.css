@@ -133,18 +133,14 @@ main{
 }
 
 .dado_box{
-  width: 30vw;
-  height: 100%;
+  margin: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
-
-.dado{
-  height: 60%;
-  width: 40%;
-  border: 2px solid black ;
-  background-color: aqua;
+.statusInfo{
+  color: #eaeaea;
+  font-size: 13px;
+  margin: 4px;
 }
 
 #heroi_box{
@@ -268,6 +264,80 @@ main{
     left: 0px;
     bottom: 0px;
   }
+}
+
+.inimigoInvertida{
+  animation-name: invertidaAnimationInimigo;
+  animation-duration: 1000ms;
+  animation-timing-function:cubic-bezier(0.2,.99,1,.45);
+}
+@keyframes invertidaAnimationInimigo {
+  0%{
+    left: 0px;
+    bottom: 0px;
+  }10%{
+    left: -348px;
+    bottom: -83px;
+  }20%{
+    left: 0px;
+    bottom: 0px;
+  }30%{
+    left: -348px;
+    bottom: -83px;
+  }40%{
+    left: 0px;
+    bottom: 0px;
+  }50%{
+    left: -348px;
+    bottom: -83px;
+  }60%{
+    left: 0px;
+    bottom: 0px;
+  }70%{
+    left: -348px;
+    bottom: -83px;
+  }80%{
+    left: 0px;
+    bottom: 0px;
+  }90%{
+    left: -348px;
+    bottom: -83px;
+  }100%{
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+.garradaIMG{
+  animation-name: garradaAnimation;
+  animation-duration: 1000ms;  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+}
+
+.bigodadaIMG{
+  position: absolute;
+  left: -40px;
+  height: 100%;
+  width: 200%;
+  top: 10px;
+}
+.divOfenca{
+    /* position: absolute; */
+    top: 0px;
+    height: 100%;
+    margin-top: -139px;
+    margin-left: 84px;
+    width: 132%;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: black;
+    background-image: url(assets/th__1_-removebg-preview.png);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
 }
 
 

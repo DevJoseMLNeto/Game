@@ -1,5 +1,3 @@
-alert("Vire a tela na horizontal")
-alert("Toque e mova o dedo nos direcionais para movimentar o kaique")
 
 
 let heroiBase =  {
@@ -22,7 +20,7 @@ let heroiWolfFormBase = {
 let inimigoBase = {
     vida: 150,
     atackNormal: 15,
-    invertida: 20
+    invertida: 25
 } 
 
 const btns_hab = {
